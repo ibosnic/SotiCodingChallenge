@@ -12,7 +12,7 @@ Input: DAMP, LIKE
 Output: DAMP -> LAMP -> LIMP -> LIME -> LIKE
 
 ## Implementation
-Since you need to get one transformation of the words I used a depth first search approach to 
+Since you need to get one valid transformation of the words I used a depth first search approach to 
 find a valid transformation, keeping track of all the intermediate results so that 
 they can be printed out. For the spell checking of tranformations I used the [NetSpell] library.
 
