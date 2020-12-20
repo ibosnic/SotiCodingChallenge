@@ -6,11 +6,11 @@ namespace SotiChallengeApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Input Start Word:");
-            var startWord = Console.ReadLine().ToUpper();
-
-            Console.WriteLine("input End Word:");
-            var endWord = Console.ReadLine().ToUpper();
+            Console.WriteLine("Input start word and end word ex.startword,endword:");
+            var words = Console.ReadLine();
+            var wordsArray = words.Split(',');
+            var startWord = wordsArray.Length == 2 ? wordsArray[0].Trim().ToUpper() : string.Empty;
+            var endWord = wordsArray.Length == 2 ? wordsArray[1].Trim().ToUpper() : string.Empty;
 
             var service = new WordTransformationService(new EnglishSpellChecker());
             var result = service.TransformWords(startWord, endWord);

@@ -12,7 +12,7 @@ namespace SotiChallengeApp
         private const string WORDS_EMPTY_TEXT = "Start Word or End Word is empty.";
         private const string NOT_SAME_LENGTH_TEXT= "Start Word and End Word are not the same length.";
         private const string WORDS_NOT_TRANSFORMED_TEXT = "Words cannot be tranformed.";
-        private const string INVALID_ENGLISH_WORDS_TEXT = "Start or End Word not valid english words.";
+        private const string INVALID_ENGLISH_WORDS_TEXT = "Start or End Word are not valid english words.";
 
         public WordTransformationService(ISpellChecker spellChecker)
         {
@@ -61,7 +61,7 @@ namespace SotiChallengeApp
             {
                 if( i == lastIndex)
                 {
-                    result += $" {resultList.ElementAt(i)}";
+                    result += $"{resultList.ElementAt(i)}";
                 }
                 else
                 {
