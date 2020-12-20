@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SotiChallengeApp
 {
+    /// <summary>
+    ///   The class to implement the solution in.
+    /// </summary>
     public class WordTransformationService
     {
         private readonly ISpellChecker _spellChecker;
@@ -19,7 +19,9 @@ namespace SotiChallengeApp
             _spellChecker = spellChecker;
         }
 
-
+        /// <summary>
+        /// Tranforms the start word into the end word keeping track of all the steps. 
+        /// </summary>
         public string TransformWords (string startWord, string endWord)
         {
             if(string.IsNullOrEmpty(startWord) || string.IsNullOrEmpty(endWord))

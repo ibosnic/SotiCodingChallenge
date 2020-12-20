@@ -1,14 +1,12 @@
 ﻿using NetSpell.SpellChecker;
 using NetSpell.SpellChecker.Dictionary;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SotiChallengeApp
 {
+    /// <summary>
+    /// This class does spelling checking for the english dictionary 
+    /// </summary>
     public class EnglishSpellChecker : ISpellChecker
     {
         private Spelling _spellingChecker = null;
@@ -32,8 +30,11 @@ namespace SotiChallengeApp
 
         private Spelling CreateSpellingChecker()
         {
-            WordDictionary wordDictionary = new WordDictionary();
-            wordDictionary.DictionaryFile = Directory.GetCurrentDirectory() + ENGLISH_DICTIONARY_PATH;
+            WordDictionary wordDictionary = new WordDictionary
+            {
+                DictionaryFile = Directory.GetCurrentDirectory() + ENGLISH_DICTIONARY_PATH
+            };
+
             wordDictionary.Initialize();
 
             Spelling spellingChecker = new Spelling();
